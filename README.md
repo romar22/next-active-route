@@ -35,7 +35,16 @@ function MyPage() {
 }
 ```
 ```ts
-For this instance it will check /blog/post === /blog/post
+Level of checking
 
-it also excludes dynamic routes when checking.
+isRouteActive(router, href, 1)
+/blog === /blog
+
+isRouteActive(router, href, 2)
+/blog/post === /blog/post
+
+isRouteActive(router, href, 3)
+/blog/post/3 === /blog/post/[dynamicId]
+
+it excludes dynamic routes when checking.
 ```
